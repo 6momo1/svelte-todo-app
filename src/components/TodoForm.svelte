@@ -1,7 +1,10 @@
 <script>
+    import {addTodo} from "../stores/todoStores.js"
 
     let todo = ''
     function handleSubmit() {
+        addTodo(todo)
+        todo = '';
         return 
     }
 

@@ -1,5 +1,10 @@
 <script>
+// @ts-nocheck
+
+    import { each } from "svelte/internal";
     import TodoForm from "../components/TodoForm.svelte";
+    import Todo from "../components/Todo.svelte";
+    import { todos } from "../stores/todoStores";
 </script>
 
 <main>
@@ -8,6 +13,9 @@
             My Todos
         </h1>
         <TodoForm />
+        {#each $todos as todo}
+            <Todo todo={todo} index={todo.id} />
+        {/each}
     </div>
 </main>
 
