@@ -1,6 +1,5 @@
 <script>
 // @ts-nocheck
-
     import { each } from "svelte/internal";
     import TodoForm from "../components/TodoForm.svelte";
     import Todo from "../components/Todo.svelte";
